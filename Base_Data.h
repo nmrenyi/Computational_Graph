@@ -22,5 +22,4 @@ public:
             return data;
         return ptr[0]->calc()+ptr[1]->calc();
     }
-    // virtual ~Base_Data()=0;
 };
