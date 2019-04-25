@@ -1,2 +1,2 @@
-main: main.cpp Base_Data.h Operator.h Value.h
-	g++ main.cpp -o main
+main: main.cpp input.cpp Base_Data.cpp Operator.cpp Base_Data.h Operator.h Value.h STL.h declarations.h
+	g++ main.cpp input.cpp Base_Data.cpp Operator.cpp -o main
