@@ -7,7 +7,7 @@
 #include"namespace.h"
 using namespace mystd;
 
-void input_description(map<string,Base_Data*>&);
-void input_node(map<string,Base_Data*>&);
-void input_operation(map<string,Base_Data*>&);
+void input_description(map<string, Base_Data*>&);
+void input_node(map<string, Base_Data*>&);
+void input_operation(map<string, Base_Data*>&);
 vector<string> input();

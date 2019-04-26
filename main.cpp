@@ -1,14 +1,13 @@
 //For Adora Lauren
 #include"Base_Data.h"
+#include"STL.h"
 #include"Value.h"
 #include"Operator.h"
 #include"declarations.h"
-#include"STL.h"
 #include"namespace.h"
 using namespace mystd;
 
-int main()
-{
+int main() {
     map<string,Base_Data*> store;
     //first part
     input_description(store);
