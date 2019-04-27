@@ -12,6 +12,7 @@
 *.pch
 *.bin
 *.ipch
+/.vscode
 
 # Compiled Dynamic libraries
 *.so
