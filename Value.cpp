@@ -10,7 +10,7 @@ pair<bool, float> Placeholder::calc() {
 Constant::Constant(float value) : data(value) {}
 pair<bool, float>  Constant::calc() {
     return std::make_pair(0, data);
-
+    
 }
 pair<bool, float>  Variable::calc() {
     return std::make_pair(0, data);

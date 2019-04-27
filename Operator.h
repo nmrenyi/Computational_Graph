@@ -4,26 +4,26 @@
 #include"Base_Data.h"
 #include"namespace.h"
 using namespace mystd;
-// 二目运算符
-class Plus : public Base_Data { // + 二目运算符
+// 双目运算符
+class Plus : public Base_Data { // + 双目运算符
 public:
     Plus(Base_Data*, Base_Data*);
     // ~Plus() {};
     pair<bool, float> calc();
 };
-class Minus : public Base_Data { // - 二目运算符
+class Minus : public Base_Data { // - 双目运算符
 public:
     Minus(Base_Data*, Base_Data*);
     // ~Minus() {};
     pair<bool, float> calc();
 };
-class Multiply : public Base_Data { // * 二目运算符
+class Multiply : public Base_Data { // * 双目运算符
 public:
     Multiply(Base_Data*, Base_Data*);
     // ~Multiply();
     pair<bool, float> calc();
 };
-class Divide : public Base_Data { // / 二目运算符
+class Divide : public Base_Data { // / 双目运算符
 public:
     Divide(Base_Data*, Base_Data*);
     // ~Divide();

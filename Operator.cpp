@@ -2,7 +2,7 @@
 #include"Operator.h"
 #include"namespace.h"
 using namespace mystd;
-// 二目运算符
+// 双目运算符
 Plus::Plus(Base_Data* left, Base_Data* right) {
     set_ptr(left, right);
     set_data(left->get_data() + right->get_data());
@@ -250,7 +250,7 @@ pair<bool, float> Print::calc() {
 // 二目比较运算符
 More::More(Base_Data* left, Base_Data* right) {
     set_ptr(left, right);
-    if(left->get_data() - right->get_data() >= 1e-5) 
+    if(left->get_data() - right->get_data() >= 1e-5) //这里保证了float型的误差
         set_data(1.0);
     else set_data(0.0);
 }

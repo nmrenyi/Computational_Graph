@@ -21,10 +21,8 @@ void input_description(map<string, Base_Data*>& store) {
     int description = 0;
     cin >> description;
     cin.get();
-    // array/map of placeholders, variables, constants
-    // Base_Data* Elementary_Value=new Base_Data[description];
     for(int i = 0; i < description; i++) {
-        vector<string> info = std::move(input());
+        vector<string> info = input();
         if(info[1].compare("P") == 0)
             store[info[0]] = new Placeholder;
         else if(info[1].compare("C") == 0)
@@ -42,9 +40,9 @@ void input_node(map<string,Base_Data*>& store) {
     cin >> node;
     cin.get();
     for(int i = 0; i < node; i++) {
-        vector<string> info = std::move(input());
+        vector<string> info = input();
         string name = info[0];
-        if(info.size() == 5) {
+        if(info.size() == 5) { // 这里是双目运算符
             string left_name = info[2];
             string operator_name = info[3];
             string right_name = info[4];
@@ -69,7 +67,7 @@ void input_node(map<string,Base_Data*>& store) {
             else 
                 cout << "Wrong operator name" << endl;
         }
-        else if(info.size() == 4) {
+        else if(info.size() == 4) { //单目运算符
             string operator_name = info[2];
             string value_name = info[3];
             if(operator_name.compare("sin") == 0)
@@ -85,13 +83,15 @@ void input_node(map<string,Base_Data*>& store) {
             else if(operator_name.compare("print") == 0) {
                 if(store.find(name) == store.end())
                     store[name] = new Print(store[value_name]);
-                else cout << "Wrong print reference" << endl;
+                else cout << "Invalid print reference" << endl;
             }
-            else cout << "Wrong operator name" << endl;
+            else cout << "Invalid operator name" << endl;
         }
-        else if(info.size() == 5) { // COND 运算符
+        else if(info.size() == 6) { // COND 运算符,还没有写!**********
+        }
 
-        }
+        else 
+            cout<<"Invalid input in node defining"<<endl;
     }
 }
 
@@ -103,7 +103,7 @@ void input_operation(map<string,Base_Data*>& store) {
     cin >> operation;
     cin.get();
     for(int i = 0; i < operation; i++) {
-        vector<string> info = std::move(input());
+        vector<string> info = input();
         int given_value_num = std::stoi(info[2]);
         string target_name = info[1];
         for(int j = 0; j < given_value_num; j++) {
