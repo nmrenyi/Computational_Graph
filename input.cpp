@@ -109,7 +109,7 @@ void input_operation(map<string,Base_Data*>& store) {
         for(int j = 0; j < given_value_num; j++) {
             string name = info[3 + 2 * j];
             float value = std::stof(info[4 + 2 * j]);
-            store[name]->set_data(value);
+            store[name]->set_data(value); 
         }
         // **************next is not right
         cout << store[target_name]->set_data(store[target_name]->calc().second) << endl;
