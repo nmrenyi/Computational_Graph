@@ -88,6 +88,7 @@ void input_node(map<string,Base_Data*>& store) {
             else cout << "Invalid operator name" << endl;
         }
         else if(info.size() == 6) { // COND 运算符,还没有写!**********
+            store[name] = new COND(store[info[3]],store[info[4]],store[info[5]]);
         }
 
         else 
